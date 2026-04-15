@@ -6,7 +6,7 @@ public class HasMap1 {
         // HashMap <key,value> name = new HashMap<>();
         HashMap<String,Integer> map = new HashMap<>();
 
-        // Insertion
+        // Insertionk
         map.put("Srinivas",61);
         map.put("sumanth",62);
         map.put("Mohan",63);
