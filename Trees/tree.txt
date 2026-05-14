@@ -1,1 +1,84 @@
-shsfo
+Parent Node: A node that is an immediate predecessor of another node. Example: 35 is the parent of 3 and 6.
+Child Node: A node that is an immediate successor of another node. Example: 3 and 6 are children of 35.
+Root Node: The topmost node in a tree, which does not have a parent. Example: 15 is the root node.
+Leaf Node (External Node): Nodes that do not have any children. Example: 1, 10, 12, 5, 7, 7 are leaf nodes.
+Ancestor: Any node on the path from the root to a given node (excluding the node itself). Example: 15 and 35 are ancestors of 10
+Descendant: A node x is a descendant of another node y if y is an ancestor of x. Example: 1, 10, and 6 are descendants of 35.
+Sibling: Nodes that share the same parent. Example: 1 and 10 are siblings, and 5 and 7 are siblings.
+Level of a Node: The number of edges in the path from the root to that node.The root node is at level 0.
+Internal Node: A node with at least one child.
+Neighbor of a Node: The parent or children of a node.
+Subtree:  A node and all its descendants form a subtree.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Tree :
+ A Tree is a non-linear hierarchical data structure made of nodes connected by edges, where one node is called the root and each node can have zero or more child nodes.
+
+Properities of the Tree :
+  Root Node → The topmost starting node of a tree.
+  Parent Node → A node that has child nodes.
+  Child Node → A node connected below a parent node.
+  Leaf Node → A node with no children.
+  Internal Node → A node having at least one child.
+  Edge → Connection between two nodes.
+  Degree of Node → Number of children a node has.
+  Degree of Tree → Maximum degree among all nodes in the tree.
+  Level of Node → Position of a node from the root.
+  Depth of Node → Number of edges from root to that node.
+  Height of Tree → Length of longest path from root to deepest node. (Height always measures from the leaf node)
+  Subtree → A smaller tree formed from a node and its descendants.
+  Path → Sequence of connected nodes.
+  Ancestor → Nodes above a particular node.
+  Descendant → Nodes below a particular node.
+  Edges Formula → A tree with n nodes has n - 1 edges.
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+
+Binary Tree :
+ A Binary Tree is a special type of tree in which each node can have at most two children, called the left child and right child.
+
+Properities of Binary Tree :
+  Maximum Children → Each node can have at most 2 children.
+  Left Child → Child node on the left side.
+  Right Child → Child node on the right side.
+  Maximum Nodes at Level l → 2^l nodes can exist at level l.
+  Maximum Nodes in Height h → 2^(h+1) - 1 nodes.
+  Minimum Height → A balanced binary tree has minimum possible height.
+  Binary Tree Types → Full, Complete, Perfect, Balanced, Degenerate.
+  Traversal Methods → Preorder, Inorder, Postorder, Level Order.
+  Recursive Structure → Every subtree is also a binary tree.
+  Edges Formula → For n nodes, edges = n - 1.
+
+Types of Binary Trees :
+  Full Binary Tree → A binary tree in which every node has either 0 or 2 children.
+  Complete Binary Tree → A binary tree in which all levels are completely filled except possibly the last level, and the last 
+                        level nodes are filled from left to right.
+  Perfect Binary Tree → A binary tree in which all internal nodes have exactly 2 children and all leaf nodes are at the same level.
+  Degenerate (Skewed) Binary Tree → A binary tree in which every parent node has only one child, making it similar to a linked list.
+
+
+
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+
+Binary Search Tree (BST) :
+ A Binary Search Tree (BST) is a special type of binary tree in which:
+  all values in the left subtree are smaller than the root node, and
+  all values in the right subtree are greater than the root node.
+
+Properities of Binary Search Tree :
+  BST Rule → Left subtree values are smaller and right subtree values are greater than the root.
+  Binary Tree Property → Each node has at most 2 children.
+  Inorder Traversal → Gives elements in sorted order.
+  Search Operation → Faster compared to normal binary tree.
+  Average Time Complexity → Search, Insert, Delete → O(log n) in balanced BST.
+  Worst Case → BST becomes skewed and operations become O(n).
+  No Duplicate Values → Usually duplicates are not allowed in BST.
+  Recursive Nature → Left and right subtrees are also BSTs.
+  Minimum Value → Leftmost node contains minimum value.
+  Maximum Value → Rightmost node contains maximum value.
