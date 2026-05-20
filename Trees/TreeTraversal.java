@@ -1,3 +1,4 @@
+import java.util.*;
 class Node{
     int value;
     Node left, right;
@@ -8,34 +9,89 @@ class Node{
 }
 
 class Traversals{
-    int i=-1;
-
-    public Node createTree(int[] arr){
-        Node node = new Node(arr[++i]);
-        if(node.value == -1){
-            return null;
+    Node root;
+    public void ConstructBst(int value){
+        root = constructTree(value, root);
+    }
+   public Node constructTree(int value, Node node){
+        if(node  == null){
+            return new Node(value);
         }
-        node.left = createTree(arr);
-        node.right = createTree(arr);
+
+        if(value < node.value){
+            node.left = constructTree(value, node.left);
+        }
+        else if(value > node.value){
+            node.right = constructTree(value, node.right);
+        }
         return node;
+   }
+
+   public void display(){
+      displayPreOrder(root);
+      System.out.println();
+      displayInOrder(root);
+      System.out.println();
+      displayPostOrder(root);  
+      System.out.println();
+      LevelOrder(root);
+   }
+
+   public void displayPreOrder(Node node){
+      if(node == null){
+        return;
+      }
+      System.out.print(node.value+"  ");
+      displayPreOrder(node.left);
+      displayPreOrder(node.right);      
+   }
+   public void displayInOrder(Node node){
+      if(node == null){
+        return;
+      }
+      displayInOrder(node.left);
+      System.out.print(node.value+"  ");
+      displayInOrder(node.right);      
+   }
+    
+    public void displayPostOrder(Node node){
+        if(node == null){
+          return;
+        }
+        displayPostOrder(node.left);
+        displayPostOrder(node.right);  
+        System.out.print(node.value+"  ");
     }
 
-    
-
+    public void LevelOrder(Node node){
+        if(node == null){
+            return;
+        }
+        Queue<Node> q = new ArrayDeque<>();
+        q.add(node);
+        while(!q.isEmpty()){
+            Node Current = q.poll();
+            System.out.print(Current.value+ " ");
+            if(Current.left!=null){
+                q.add(Current.left);
+            }
+            if(Current.right!=null){
+                q.add(Current.right);
+            }
+        }
+    }
 }
 
 public class TreeTraversal {
     public static void main(String[] args){
-        int[] arr = {1,
-            2,
-            -1,
-            -1,
-            3,
-            -1,
-            -1};
-        Traversals t = new Traversals();
-        Node root = t.createTree(arr);
-        System.out.println(root.value);
-
+       Traversals t = new Traversals();
+       t.ConstructBst(20);
+       t.ConstructBst(10);
+       t.ConstructBst(30);
+       t.ConstructBst(2);
+       t.ConstructBst(3);
+       t.ConstructBst(21);
+       t.ConstructBst(200);
+       t.display();
     }
 }
